@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
+const isGithubActions = true;
 let assetPrefix = "";
 let basePath = "";
 if (isGithubActions) {
-  // 去掉 `<owner>/`
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
+  const repo = `yitang.github.io`.replace(/.*?\//, "");
 
   assetPrefix = `/${repo}/`;
   basePath = `/${repo}`;
