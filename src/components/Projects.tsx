@@ -1,5 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { getImagePath } from "@/utils/imagePath";
 
 interface Project {
   title: string;
@@ -68,7 +69,7 @@ export default function Projects() {
                 <div className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold">
                   {project.image ? (
                     <Image
-                      src={project.image}
+                      src={getImagePath(project.image)}
                       alt={project.title}
                       width={500}
                       height={300}

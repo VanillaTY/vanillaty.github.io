@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "deploy": "gh-pages -d out",
+    "deploy": "next build && gh-pages -d out --nojekyll",
     "start": "next start",
     "lint": "next lint"
   },

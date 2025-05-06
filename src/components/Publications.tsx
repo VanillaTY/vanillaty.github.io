@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
+import { getImagePath } from "@/utils/imagePath";
 
 interface Publication {
   conference: string;
@@ -79,7 +80,7 @@ export default function Publications() {
                   <div className="md:w-1/3 flex-shrink-0">
                     <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-md">
                       <Image
-                        src={publication.cover}
+                        src={getImagePath(publication.cover)}
                         alt={publication.title}
                         width={500}
                         height={300}

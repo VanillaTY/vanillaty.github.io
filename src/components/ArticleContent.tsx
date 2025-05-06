@@ -2,6 +2,7 @@
 
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
+import { getImagePath } from "@/utils/imagePath";
 
 export default function ArticleContent({ content }: { content: string }) {
   return (
@@ -46,7 +47,7 @@ export default function ArticleContent({ content }: { content: string }) {
         img: ({ src, alt }) => (
           <div className="relative w-full h-[400px] my-4">
             <Image
-              src={typeof src === "string" ? src : ""}
+              src={getImagePath(typeof src === "string" ? src : "")}
               alt={alt || "Blog post image"}
               fill
               className="object-cover rounded-lg"
