@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import { Moon, Sun, Menu, X, HomeIcon, BookOpen } from "lucide-react";
