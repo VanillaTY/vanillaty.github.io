@@ -1,0 +1,106 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1295,[],""]
+5:I[9665,[],"MetadataBoundary"]
+7:I[9665,[],"OutletBoundary"]
+a:I[4911,[],"AsyncMetadataOutlet"]
+c:I[9665,[],"ViewportBoundary"]
+e:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/844ef355bd64418a.css","style"]
+0:{"P":null,"b":"yl879sXOnRQy1Gk2WZ2KD","p":"","c":["","blog","getting-started-with-nextjs"],"i":false,"f":[[["",{"children":["blog",{"children":[["id","getting-started-with-nextjs","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/844ef355bd64418a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["blog",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","getting-started-with-nextjs","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",["$","$L5",null,{"children":"$L6"}],null,["$","$L7",null,{"children":["$L8","$L9",["$","$La",null,{"promise":"$@b"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","BWhkmS3rz_9OvgWZqT1LK",{"children":[["$","$Lc",null,{"children":"$Ld"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+f:"$Sreact.suspense"
+10:I[4911,[],"AsyncMetadata"]
+12:I[1871,["574","static/chunks/574-eadd8b226b9b3348.js","766","static/chunks/766-8cb3eaaa27f75795.js","411","static/chunks/411-72a2b7bbc3988cf4.js","567","static/chunks/app/blog/%5Bid%5D/page-6063c18eaf06b938.js"],"default"]
+13:I[6874,["574","static/chunks/574-eadd8b226b9b3348.js","766","static/chunks/766-8cb3eaaa27f75795.js","411","static/chunks/411-72a2b7bbc3988cf4.js","567","static/chunks/app/blog/%5Bid%5D/page-6063c18eaf06b938.js"],""]
+14:I[813,["574","static/chunks/574-eadd8b226b9b3348.js","766","static/chunks/766-8cb3eaaa27f75795.js","411","static/chunks/411-72a2b7bbc3988cf4.js","567","static/chunks/app/blog/%5Bid%5D/page-6063c18eaf06b938.js"],"default"]
+6:["$","$f",null,{"fallback":null,"children":["$","$L10",null,{"promise":"$@11"}]}]
+15:Tabc,
+在本文中，我们将介绍如何使用 NatApp 实现内网穿透。NatApp 是一个非常方便的工具，可以让你将本地服务器暴露到互联网上，从而实现内网穿透。适用于个人开发者、测试人员等需要快速搭建服务的场景。
+
+## 步骤 1: 注册并登录 NatApp
+
+1. 访问 [NatApp 官网](https://natapp.cn)。
+2. 注册一个账户并登录。
+
+## 步骤 2: 购买或创建隧道
+
+1. 登录后，进入“我的隧道”页面。
+2. 点击“购买隧道”，选择“免费隧道”或其他套餐。
+3. 配置隧道信息：
+   - **隧道名称**：自定义名称。
+   - **协议类型**：选择 `http`、`https` 或 `tcp`。
+   - **本地端口**：填写本地服务的端口号（如 8080）。
+4. 提交后，系统会生成一个 `authtoken`，保存好这个信息。
+
+## 步骤 3: 下载并配置客户端
+
+1. 前往 [NatApp 下载页面](https://natapp.cn/#download) 下载适用于您操作系统的客户端。
+
+2. 解压下载的文件，找到 `natapp.exe`（Windows）或对应的可执行文件。
+
+3. 在客户端所在的目录下，创建一个名为 `config.ini` 的配置文件，内容如下：
+
+   ```ini
+   [default]
+   authtoken=您的authtoken
+   ```
+
+4. 将 `config.ini` 文件与客户端放在同一目录下。
+
+## 步骤 4: 启动客户端
+
+- **Windows**：
+
+  1. 双击 `natapp.exe`，或在命令行中运行以下命令：
+
+     ```bash
+     natapp -authtoken=您的authtoken
+     ```
+
+- **Linux/macOS**：
+
+  1. 赋予执行权限并运行以下命令：
+
+     ```bash
+     chmod +x natapp
+     ./natapp -authtoken=您的authtoken
+     ```
+
+1. 启动成功后，您会看到类似如下的信息：
+
+   ```
+   Tunnel Status    Online
+   Forwarding       http://xxxx.natappfree.cc -> 127.0.0.1:8080
+   ```
+
+   这表示您的本地服务已经成功暴露到公网。
+
+## 步骤 5: 测试访问
+
+1. 在浏览器中输入 `http://xxxx.natappfree.cc`，如果能正常访问到您本地的服务，说明内网穿透配置成功。
+
+## 注意事项
+
+- **免费隧道**：
+  - 每天有连接时长限制。
+  - 域名为随机分配的二级域名。
+- **付费隧道**：
+  - 支持自定义域名。
+  - 提供更高的稳定性和带宽。
+- **安全性**：
+  - 避免将敏感服务暴露在公网。
+  - 建议设置访问控制或使用 HTTPS 进行加密。
+
+## 总结
+
+通过以上步骤，您可以轻松实现内网穿透，访问本地开发服务。无论是进行测试、调试，还是与团队协作，NatApp 都是一个非常实用的工具。希望本教程能帮助您顺利搭建内网穿透环境。
+
+如果您需要更详细的图文教程，可以参考官方提供的 [NatApp 新手教程](https://natapp.cn/article/natapp_newbie)。
+    4:["$","div",null,{"className":"min-h-screen bg-[var(--background)] text-[var(--foreground)]","children":[["$","$L12",null,{"isBlogPage":true}],["$","header",null,{"className":"mb-12","children":["$","div",null,{"className":"container mx-auto px-6 pt-25","children":["$","div",null,{"className":"max-w-3xl mx-auto","children":[["$","$L13",null,{"href":"/blog","className":"inline-flex items-center text-[var(--primary)] mb-6 hover:underline","children":"← Back to all posts"}],["$","h1",null,{"className":"text-3xl md:text-4xl lg:text-5xl font-bold mb-4","children":"使用 NatApp 实现内网穿透教程"}],["$","div",null,{"className":"flex items-center text-[var(--muted-foreground)] mb-6","children":[["$","span",null,{"children":"2024-05-06"}],["$","span",null,{"className":"mx-2","children":"•"}],["$","div",null,{"className":"flex gap-2","children":[["$","span","Internal Network Penetration",{"className":"px-2 py-1 bg-[var(--secondary)] text-[var(--secondary-foreground)] text-xs rounded-full","children":"Internal Network Penetration"}]]}]]}]]}]}]}],["$","article",null,{"className":"prose prose-lg dark:prose-invert max-w-3xl mx-auto px-6","children":["$","$L14",null,{"content":"$15"}]}]]}]
+9:null
+d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+11:{"metadata":[["$","title","0",{"children":"Yi Tang's Website"}],["$","meta","1",{"name":"description","content":"Yi Tang's Website"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]],"error":null,"digest":"$undefined"}
+b:{"metadata":"$11:metadata","error":null,"digest":"$undefined"}
