@@ -1,4 +1,3 @@
-import { getImagePath } from "@/utils/imagePath";
 import { Mail, Github, GraduationCap } from "lucide-react";
 import Image from "next/image";
 
@@ -80,7 +79,7 @@ export default function Hero() {
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden relative bg-[var(--secondary)] border-4 border-[var(--background)] z-10 shadow-xl">
               <div className="w-full h-full flex items-center justify-center">
                 <Image
-                  src={getImagePath("/myphoto.png")}
+                  src={"/myphoto.png"}
                   alt="Yi Tang"
                   width={300}
                   height={300}
