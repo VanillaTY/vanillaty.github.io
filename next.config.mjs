@@ -2,8 +2,8 @@
 
 const nextConfig = {
   output: "export",
-  basePath: "/yitang.github.io",
-  assetPrefix: "/yitang.github.io/",
+  basePath: "/vanillaty.github.io",
+  assetPrefix: "/vanillaty.github.io/",
   images: {
     unoptimized: true,
   },
