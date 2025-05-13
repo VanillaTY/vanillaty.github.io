@@ -1,0 +1,123 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1295,[],""]
+5:I[9665,[],"MetadataBoundary"]
+7:I[9665,[],"OutletBoundary"]
+a:I[4911,[],"AsyncMetadataOutlet"]
+c:I[9665,[],"ViewportBoundary"]
+e:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/82969837b1b64619.css","style"]
+0:{"P":null,"b":"QWC5XY07HjARotdzaAsgO","p":"","c":["","blog","mastering-typescript"],"i":false,"f":[[["",{"children":["blog",{"children":[["id","mastering-typescript","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/82969837b1b64619.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["blog",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","mastering-typescript","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",["$","$L5",null,{"children":"$L6"}],null,["$","$L7",null,{"children":["$L8","$L9",["$","$La",null,{"promise":"$@b"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","ndf4JC1T9TLcBT5Y1s6TN",{"children":[["$","$Lc",null,{"children":"$Ld"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+f:"$Sreact.suspense"
+10:I[4911,[],"AsyncMetadata"]
+12:I[1871,["574","static/chunks/574-eadd8b226b9b3348.js","766","static/chunks/766-8cb3eaaa27f75795.js","411","static/chunks/411-72a2b7bbc3988cf4.js","567","static/chunks/app/blog/%5Bid%5D/page-6063c18eaf06b938.js"],"default"]
+13:I[6874,["574","static/chunks/574-eadd8b226b9b3348.js","766","static/chunks/766-8cb3eaaa27f75795.js","411","static/chunks/411-72a2b7bbc3988cf4.js","567","static/chunks/app/blog/%5Bid%5D/page-6063c18eaf06b938.js"],""]
+14:I[813,["574","static/chunks/574-eadd8b226b9b3348.js","766","static/chunks/766-8cb3eaaa27f75795.js","411","static/chunks/411-72a2b7bbc3988cf4.js","567","static/chunks/app/blog/%5Bid%5D/page-6063c18eaf06b938.js"],"default"]
+6:["$","$f",null,{"fallback":null,"children":["$","$L10",null,{"promise":"$@11"}]}]
+15:Teb5,
+> PostCSS 是一个基于插件的 CSS 处理工具，它将 CSS 转换为抽象语法树（AST），通过插件对其进行处理，最后生成新的 CSS 代码。([Oryoy][1])
+
+
+## 📌 什么是 PostCSS？
+
+* **非预处理器**：PostCSS 不像 Sass 或 Less 那样定义新的语法，而是处理标准 CSS。
+* **插件驱动**：其核心是一个轻量级的解析器，开发者可以通过插件对 AST 进行各种处理和修改。
+* **生态系统丰富**：许多工具（如 Autoprefixer、Stylelint、CSSnano）都是建立在 PostCSS 生态系统之上的。([postcss.org.cn][2], [CSDN博客][3])
+
+
+## 🧠 架构概览
+
+PostCSS 的工作流程如下：([postcss.org.cn][4])
+
+1. **解析（Parsing）**：将 CSS 字符串转换为抽象语法树（AST）。
+2. **转换（Transforming）**：插件对 AST 进行操作，如添加前缀、压缩等。
+3. **生成（Stringifying）**：将修改后的 AST 转换回 CSS 字符串。([CSDN博客][3])
+
+这种架构使得 PostCSS 具有高度的灵活性和可扩展性。([CSDN博客][3])
+
+
+## 🔍 核心组件详解
+
+### 1. 词法分析器（Tokenizer）
+
+* **功能**：将 CSS 字符串拆分为标记（tokens），如选择器、属性、值等。
+* **优势**：提高解析性能，便于后续的 AST 构建。([postcss.org.cn][2])
+
+### 2. 抽象语法树（AST）
+
+* **结构**：以树形结构表示 CSS 的语法和结构。
+* **用途**：插件通过遍历和修改 AST，实现对 CSS 的各种转换。([Oryoy][1], [腾讯云][5])
+
+### 3. 插件系统
+
+* **机制**：插件是函数，接受 AST 作为参数，对其进行操作。
+* **示例**：Autoprefixer 自动添加浏览器前缀，cssnano 进行 CSS 压缩。([Oryoy][1], [CSDN博客][3])
+
+
+## 🛠️ 插件开发示例
+
+以下是一个简单的插件示例，它为所有选择器添加前缀：
+
+```javascript
+module.exports = postcss.plugin('custom-plugin', function (opts) {
+  return function (root) {
+    root.walkRules(rule => {
+      rule.selector = '.custom-prefix ' + rule.selector;
+    });
+  };
+});
+```
+
+
+
+该插件遍历所有规则，为每个选择器添加 `.custom-prefix` 前缀。([腾讯云][5])
+
+
+## ⚙️ 集成与配置
+
+* **安装**：使用 npm 安装 PostCSS 及所需插件。
+
+```bash
+  npm install postcss autoprefixer --save-dev
+```
+
+
+
+* **配置文件**：创建 `postcss.config.js`，指定使用的插件。([CSDN博客][6])
+
+```javascript
+  module.exports = {
+    plugins: [
+      require('autoprefixer')
+    ]
+  };
+```
+
+
+
+* **构建工具集成**：可与 Webpack、Gulp 等构建工具集成，自动处理 CSS。([腾讯云][5])
+
+## 📚 参考资料
+
+* [PostCSS 中文文档](https://postcss.org.cn/docs/)
+* [PostCSS Architecture](https://postcss.org/docs/postcss-architecture)
+* [PostCSS 插件列表](https://www.postcss.com.cn/plugins/)
+
+
+通过理解 PostCSS 的架构和工作原理，可以更高效地处理 CSS，提高开发效率和代码质量。
+
+[1]: https://www.oryoy.com/news/jie-mi-postcss-rang-css-geng-jia-qiang-da-yu-gao-xiao-de-shi-yong-zhi-nan.html?utm_source=chatgpt.com "揭秘PostCSS：让CSS更加强大与高效的实用指南 - 云原生实践"
+[2]: https://postcss.org.cn/docs/postcss-architecture?utm_source=chatgpt.com "PostCSS 架构 中文"
+[3]: https://blog.csdn.net/AOMGyz/article/details/138016887?utm_source=chatgpt.com "PostCSS详细介绍_postcss是什么-CSDN博客"
+[4]: https://postcss.org.cn/docs/?utm_source=chatgpt.com "PostCSS 文档 中文"
+[5]: https://cloud.tencent.com/developer/article/2470407?utm_source=chatgpt.com "PostCSS概述-腾讯云开发者社区-腾讯云"
+[6]: https://blog.csdn.net/nljycg/article/details/138196855?utm_source=chatgpt.com "PostCSS 从入门到精通，看着一篇就够了（1）-CSDN博客"
+
+      4:["$","div",null,{"className":"min-h-screen bg-[var(--background)] text-[var(--foreground)]","children":[["$","$L12",null,{"isBlogPage":true}],["$","header",null,{"className":"mb-12","children":["$","div",null,{"className":"container mx-auto px-6 pt-25","children":["$","div",null,{"className":"max-w-3xl mx-auto","children":[["$","$L13",null,{"href":"/blog","className":"inline-flex items-center text-[var(--primary)] mb-6 hover:underline","children":"← Back to all posts"}],["$","h1",null,{"className":"text-3xl md:text-4xl lg:text-5xl font-bold mb-4","children":"PostCSS 学习笔记"}],["$","div",null,{"className":"flex items-center text-[var(--muted-foreground)] mb-6","children":[["$","span",null,{"children":"2025-05-13"}],["$","span",null,{"className":"mx-2","children":"•"}],["$","div",null,{"className":"flex gap-2","children":[["$","span","PostCSS",{"className":"px-2 py-1 bg-[var(--secondary)] text-[var(--secondary-foreground)] text-xs rounded-full","children":"PostCSS"}],["$","span","CSS",{"className":"px-2 py-1 bg-[var(--secondary)] text-[var(--secondary-foreground)] text-xs rounded-full","children":"CSS"}]]}]]}]]}]}]}],["$","article",null,{"className":"prose prose-lg dark:prose-invert max-w-3xl mx-auto px-6","children":["$","$L14",null,{"content":"$15"}]}]]}]
+9:null
+d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+11:{"metadata":[["$","title","0",{"children":"Yi Tang's Website"}],["$","meta","1",{"name":"description","content":"Yi Tang's Website"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]],"error":null,"digest":"$undefined"}
+b:{"metadata":"$11:metadata","error":null,"digest":"$undefined"}
