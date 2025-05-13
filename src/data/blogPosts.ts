@@ -12,7 +12,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "getting-started-with-nextjs",
     title: "使用 NatApp 实现内网穿透教程",
     description: "介绍如何使用 NatApp 实现内网穿透",
-    date: "2024-05-06",
+    date: "205-05-06",
     tags: ["Internal Network Penetration"],
     content: `
 在本文中，我们将介绍如何使用 NatApp 实现内网穿透。NatApp 是一个非常方便的工具，可以让你将本地服务器暴露到互联网上，从而实现内网穿透。适用于个人开发者、测试人员等需要快速搭建服务的场景。
@@ -98,52 +98,113 @@ export const BLOG_POSTS: BlogPost[] = [
 如果您需要更详细的图文教程，可以参考官方提供的 [NatApp 新手教程](https://natapp.cn/article/natapp_newbie)。
     `,
   },
-  //   {
-  //     id: "mastering-typescript",
-  //     title: "Mastering TypeScript for Modern Web Development",
-  //     description:
-  //       "Elevate your JavaScript code with the power of static typing.",
-  //     date: "2023-06-22",
-  //     tags: ["TypeScript", "JavaScript", "Programming"],
-  //     content: `
-  // # Mastering TypeScript
+  {
+    id: "mastering-typescript",
+    title: "PostCSS 学习笔记",
+    description: "PostCSS 学习笔记：架构与原理",
+    date: "2025-05-13",
+    tags: ["PostCSS", "CSS"],
+    content: `
+> PostCSS 是一个基于插件的 CSS 处理工具，它将 CSS 转换为抽象语法树（AST），通过插件对其进行处理，最后生成新的 CSS 代码。([Oryoy][1])
 
-  // TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 
-  // ## Benefits of TypeScript
+## 📌 什么是 PostCSS？
 
-  // - Catch errors early during development
-  // - Better IDE support with intelligent code completion
-  // - Easier refactoring
-  // - Improved code documentation
+* **非预处理器**：PostCSS 不像 Sass 或 Less 那样定义新的语法，而是处理标准 CSS。
+* **插件驱动**：其核心是一个轻量级的解析器，开发者可以通过插件对 AST 进行各种处理和修改。
+* **生态系统丰富**：许多工具（如 Autoprefixer、Stylelint、CSSnano）都是建立在 PostCSS 生态系统之上的。([postcss.org.cn][2], [CSDN博客][3])
 
-  // ## Basic Types in TypeScript
 
-  // \`\`\`typescript
-  // let isDone: boolean = false;
-  // let decimal: number = 6;
-  // let color: string = "blue";
-  // let list: number[] = [1, 2, 3];
-  // let x: [string, number] = ["hello", 10]; // Tuple
-  // \`\`\`
+## 🧠 架构概览
 
-  // ## TypeScript with React
+PostCSS 的工作流程如下：([postcss.org.cn][4])
 
-  // TypeScript works great with React! Here's a simple component:
+1. **解析（Parsing）**：将 CSS 字符串转换为抽象语法树（AST）。
+2. **转换（Transforming）**：插件对 AST 进行操作，如添加前缀、压缩等。
+3. **生成（Stringifying）**：将修改后的 AST 转换回 CSS 字符串。([CSDN博客][3])
 
-  // \`\`\`typescript
-  // interface GreetingProps {
-  //   name: string;
-  // }
+这种架构使得 PostCSS 具有高度的灵活性和可扩展性。([CSDN博客][3])
 
-  // function Greeting({ name }: GreetingProps) {
-  //   return <h1>Hello, {name}!</h1>;
-  // }
 
-  // export default Greeting;
-  // \`\`\`
-  //     `,
-  //   },
+## 🔍 核心组件详解
+
+### 1. 词法分析器（Tokenizer）
+
+* **功能**：将 CSS 字符串拆分为标记（tokens），如选择器、属性、值等。
+* **优势**：提高解析性能，便于后续的 AST 构建。([postcss.org.cn][2])
+
+### 2. 抽象语法树（AST）
+
+* **结构**：以树形结构表示 CSS 的语法和结构。
+* **用途**：插件通过遍历和修改 AST，实现对 CSS 的各种转换。([Oryoy][1], [腾讯云][5])
+
+### 3. 插件系统
+
+* **机制**：插件是函数，接受 AST 作为参数，对其进行操作。
+* **示例**：Autoprefixer 自动添加浏览器前缀，cssnano 进行 CSS 压缩。([Oryoy][1], [CSDN博客][3])
+
+
+## 🛠️ 插件开发示例
+
+以下是一个简单的插件示例，它为所有选择器添加前缀：
+
+\`\`\`javascript
+module.exports = postcss.plugin('custom-plugin', function (opts) {
+  return function (root) {
+    root.walkRules(rule => {
+      rule.selector = '.custom-prefix ' + rule.selector;
+    });
+  };
+});
+\`\`\`
+
+
+
+该插件遍历所有规则，为每个选择器添加 \`.custom-prefix\` 前缀。([腾讯云][5])
+
+
+## ⚙️ 集成与配置
+
+* **安装**：使用 npm 安装 PostCSS 及所需插件。
+
+\`\`\`bash
+  npm install postcss autoprefixer --save-dev
+\`\`\`
+
+
+
+* **配置文件**：创建 \`postcss.config.js\`，指定使用的插件。([CSDN博客][6])
+
+\`\`\`javascript
+  module.exports = {
+    plugins: [
+      require('autoprefixer')
+    ]
+  };
+\`\`\`
+
+
+
+* **构建工具集成**：可与 Webpack、Gulp 等构建工具集成，自动处理 CSS。([腾讯云][5])
+
+## 📚 参考资料
+
+* [PostCSS 中文文档](https://postcss.org.cn/docs/)
+* [PostCSS Architecture](https://postcss.org/docs/postcss-architecture)
+* [PostCSS 插件列表](https://www.postcss.com.cn/plugins/)
+
+
+通过理解 PostCSS 的架构和工作原理，可以更高效地处理 CSS，提高开发效率和代码质量。
+
+[1]: https://www.oryoy.com/news/jie-mi-postcss-rang-css-geng-jia-qiang-da-yu-gao-xiao-de-shi-yong-zhi-nan.html?utm_source=chatgpt.com "揭秘PostCSS：让CSS更加强大与高效的实用指南 - 云原生实践"
+[2]: https://postcss.org.cn/docs/postcss-architecture?utm_source=chatgpt.com "PostCSS 架构 中文"
+[3]: https://blog.csdn.net/AOMGyz/article/details/138016887?utm_source=chatgpt.com "PostCSS详细介绍_postcss是什么-CSDN博客"
+[4]: https://postcss.org.cn/docs/?utm_source=chatgpt.com "PostCSS 文档 中文"
+[5]: https://cloud.tencent.com/developer/article/2470407?utm_source=chatgpt.com "PostCSS概述-腾讯云开发者社区-腾讯云"
+[6]: https://blog.csdn.net/nljycg/article/details/138196855?utm_source=chatgpt.com "PostCSS 从入门到精通，看着一篇就够了（1）-CSDN博客"
+
+      `,
+  },
   //   {
   //     id: "responsive-design-principles",
   //     title: "Responsive Design Principles Every Developer Should Know",
